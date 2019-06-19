@@ -1,10 +1,11 @@
-|  Tipos Cursor | Cursor Mouse |
-| ------------- | ------------- |
-| Seta | OK  |
-| Nenhum  | OK  |
-| Circulo  | OK  |
-| Quadrado  | OK  |
-| Linha  | OK  |
+|  Tipos Cursor | Cursor Mouse | Classe Reponsavel |  Função Reponsavel |
+| :---         |     :---:      |   :---:      |          ---: |
+| Seta | OK  |  AutomateDraw  |
+| Nenhum  | OK  |AutomateDraw  |
+| Circulo  | OK  |AutomateDraw  |
+| Quadrado  | OK  |AutomateDraw  |
+| Linha  | OK  |AutomateDraw  |
+| Setar Cursor automaticamente  | OK  |AutomateDraw  |
 
 |   | Arquivos |
 | ------------- | ------------- |
@@ -21,9 +22,18 @@
 | Adicionar imagem do disco | OK  |
 | Verificar seleção de Menu  | OK  |
 | Criar componente baseado em click  | OK  |
-| Setar Cursor automaticamente  | OK  |
 | Limpar Canvas  | OK  |
 | Desfazer última ação  | OK  |
+| Esquerdo Pressionado | OK  |
+| Direito Pressionado  | OK  |
+| Criar Circulo  | OK  |
+| Criar Quadrado  | OK  |
+| Criar Linha  | OK  |
+| Criar Retangulo  | OK  |
+| Criar Texto  | OK  |
+| Criar Circulo Posição Especifica | OK  |
+| Criar Quadrado  Posição Especifica| OK  |
+| Criar Linha Posição Especifica | OK  |
 
 |   | Icones |
 | ------------- | ------------- |
@@ -32,15 +42,9 @@
 | Tela cheia  | OK  |
 | Sair tele cheia  | OK  |  
 
-|   | Icones |
-| ------------- | ------------- |
-| Checado | OK  |
-| Sem icone  | OK  |
-| Tela cheia  | OK  |
-| Sair tele cheia  | OK  |
-
 |   | Componentes |
 | ------------- | ------------- |
 | Dialogo de Textp | OK  |
 | Componentes UI Visiveis  | OK  |
 | Componentes UI Invisiveis  | OK  |
+

@@ -1,5 +1,5 @@
 |  Tipos Cursor | Cursor Mouse | Classe Reponsavel |  Função Reponsavel |
-| :---         |     :---:      |   :---:      |          ---: |
+| :---         |     :---:      |   :---:      |          :--- |
 | Seta | OK  |  AutomateDraw  |SetArrowCursor()
 | Nenhum  | OK  |AutomateDraw  |SetNoneCursor()
 | Circulo  | OK  |CanvasDraw  |Cursor_Circle(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
@@ -8,16 +8,16 @@
 | Setar Cursor automaticamente  | OK  | AutomateDraw  | Cursors(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
 
 |   | Arquivos | Classe Reponsavel |  Função Reponsavel |
-| :---         |     :---:      |   :---:      |          ---: |
+| :---         |     :---:      |   :---:      |          :--- |
 | Ler Duração Vídeo | OK  |VideoControl|GetDurationVideoAsync(StorageFile)
 | Iniciar Vídeo  | OK  |VideoControl|StartVideo(StorageFile, MediaElement)
-| Ler Imagens de Disco  | OK  | GetDiskImagesAsync(StorageFolder)
-| Baixar pacote de Imagens via URL  | OK  |GetImagesWebAsync(String url_base, List<String> list_nomes, StorageFolder)
-| Baixar Imagem via URL  | OK  |DownloaImageDisk(string url_base, string path_file, StorageFolder)
-| Ler Arquivos Disco  | OK  |GetDiskFileAsync(StorageFolder)
+| Ler Imagens de Disco  | OK  |ImageControl| GetDiskImagesAsync(StorageFolder)
+| Baixar pacote de Imagens via URL  | OK  |ImageControl|GetImagesWebAsync(String url_base, List<String> list_nomes, StorageFolder)
+| Baixar Imagem via URL  | OK  |ImageControl|DownloaImageDisk(string url_base, string path_file, StorageFolder)
+| Ler Arquivos Disco  | OK  |GetDiskFileAsync|GetDiskFileAsync(StorageFolder)
   
-|   | Canvas |
-| ------------- | ------------- |
+|   | Canvas | Classe Reponsavel |  Função Reponsavel |
+| :---         |     :---:      |   :---:      |          :---: |
 | Salvar em disco | OK  |
 | Adicionar imagem do disco | OK  |
 | Verificar seleção de Menu  | OK  |

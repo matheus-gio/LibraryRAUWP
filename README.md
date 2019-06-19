@@ -26,6 +26,6 @@ For more information, see the PyQGIS Developer Cookbook at:
 <a href="http://www.qgis.org/pyqgis-cookbook/index.html">http://www.qgis.org/pyqgis-cookbook/index.html</a>.
 </p>
 </div>
-&copy;2019 Matheus Giovanni Lucena
+&copy; Copyright 2019 Matheus Giovanni Lucena
 
     

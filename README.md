@@ -17,7 +17,7 @@
 | Ler Arquivos Disco  | OK  |GetDiskFileAsync|GetDiskFileAsync(StorageFolder)
   
 |   | Canvas | Classe Reponsavel |  Função Reponsavel |
-| :---         |     :---:      |   :---:      |          :---: |
+| :---         |     :---:      |   :---:      |          :--- |
 | Salvar em disco | OK  | ImageControl  |saveImageAsync(Canvas, StorageFolder, string nome)
 | Adicionar imagem do disco | OK  |ImageControl|AddImgtoCanvasAsync(Canvas, Image)
 | Verificar seleção de Menu  | OK  |AutomateDraw| Text, Line, Square, Circle, Rectangle;
@@ -36,14 +36,14 @@
 | Criar Linha Posição Especifica | OK  |CanvasDraw|CreateLinePosition(Canvas canvas, double size, PointerRoutedEventArgs e, Color cor, double x1, double x2, double y1, double y2)
 
 |   | Icones | Classe Reponsavel |  Função Reponsavel |
-| :---         |     :---:      |   :---:      |          :---: |
+| :---         |     :---:      |   :---:      |          :--- |
 | Checado | OK  |IconsControl|SetChecked(FontIcon element)
 | Sem icone  | OK  |IconsControl|SetNotIcon(FontIcon element)
 | Tela cheia  | OK  |IconsControl|SetGoFullScreen(FontIcon element)
 | Sair tela cheia  | OK  |  IconsControl|SetGoWindowScreen(FontIcon element)
 
 |   | Componentes | Classe Reponsavel |  Função Reponsavel |
-| :---         |     :---:      |   :---:      |          :---: |
+| :---         |     :---:      |   :---:      |          :--- |
 | Dialogo de Texto | OK  |MessageControl|InputTextDialogAsync(CanvasDraw canvasdraw, string title)
 | Componentes UI Visiveis  | OK  |MessageControl|HideComponent(UIElement[] component)
 | Componentes UI Invisiveis  | OK  |MessageControl|VisibleComponent(UIElement[] component)

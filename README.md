@@ -28,5 +28,4 @@ For more information, see the PyQGIS Developer Cookbook at:
 </div>
 <img src="http://geoapt.com/geoapt_logo_p.png" alt='GeoApt LLC' title='GeoApt LLC' align='absmiddle'>
 &copy;2011-2014 GeoApt LLC - geoapt.com
-</body>
-</html>
+

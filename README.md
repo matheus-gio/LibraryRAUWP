@@ -35,6 +35,14 @@
 | Criar Quadrado  Posição Especifica| OK  |CanvasDraw|CreateSquarePosition(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor, double x, double y)
 | Criar Linha Posição Especifica | OK  |CanvasDraw|CreateLinePosition(Canvas canvas, double size, PointerRoutedEventArgs e, Color cor, double x1, double x2, double y1, double y2)
 
+Para os icones funcionarem é necessario uma configuração adicional no arquivo de layout, deve-se setar FontFamily="Segoe MDL2 Assets", segue o exemplo abaixo :
+
+MenuFlyoutItem x:Name="menu_fullScreen" Visibility="Visible" Text="Go to Window" Click="Menu_fullScreen_Click">
+    <MenuFlyoutItem.Icon>
+        <FontIcon FontFamily="Segoe MDL2 Assets" x:Name="menu_fullScreen_icon"/>
+    </MenuFlyoutItem.Icon>
+</MenuFlyoutItem>
+                    
 |   | Icones | Classe Reponsavel |  Função Reponsavel |
 | :---         |     :---:      |   :---:      |          :--- |
 | Checado | OK  |IconsControl|SetChecked(FontIcon element)

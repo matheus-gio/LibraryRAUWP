@@ -1,12 +1,11 @@
 <html>
 <body style='background-color:##D7ECF8;'>
-<h3>Plugin Builder Results</h3>
+<h3>RALIBRARY UWP</h3>
 <div id='help' style='font-size:.9em;'>
-Your plugin <b>GeneticSimplifier</b> was created in:<br>
-&nbsp;&nbsp;<b>C:/Documents and Settings/Luiz Claudio/.qgis2/python/plugins\GeneticSimplifier</b>
-<p>
-Your QGIS plugin directory is located at:<br>
-&nbsp;&nbsp;<b>C:/Documents and Settings/Luiz Claudio/.qgis2/python/plugins</b>
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 <p>
 <b>What's Next</b>
 <ol>

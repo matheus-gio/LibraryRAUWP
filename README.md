@@ -5,7 +5,7 @@
 | Circulo  | OK  |
 | Quadrado  | OK  |
 | Linha  | OK  |
-
+<p>
 
 |   | Arquivos |
 | ------------- | ------------- |
@@ -16,7 +16,7 @@
 | Baixar Imagem via URL  | OK  |
 | Ler Arquivos Disco  | OK  |
 
-
+<p>
 |   | Canvas |
 | ------------- | ------------- |
 | Salvar em disco | OK  |
@@ -26,6 +26,7 @@
 | Setar Cursor automaticamente  | OK  |
 | Limpar Canvas  | OK  |
 | Desfazer última ação  | OK  |
+<p>
 
 |   | Icones |
 | ------------- | ------------- |
@@ -33,7 +34,8 @@
 | Sem icone  | OK  |
 | Tela cheia  | OK  |
 | Sair tele cheia  | OK  |
-
+<p>
+  
 
 |   | Icones |
 | ------------- | ------------- |
@@ -41,7 +43,8 @@
 | Sem icone  | OK  |
 | Tela cheia  | OK  |
 | Sair tele cheia  | OK  |
-
+<p>
+  
 |   | Componentes |
 | ------------- | ------------- |
 | Dialogo de Textp | OK  |

@@ -2,10 +2,10 @@
 <body style='background-color:##D7ECF8;'>
 <h3>RALIBRARY UWP</h3>
 <div id='help' style='font-size:.9em;'>
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 <p>
 <b>What's Next</b>
 <ol>

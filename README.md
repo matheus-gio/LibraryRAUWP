@@ -1,20 +1,20 @@
 |  Tipos Cursor | Cursor Mouse | Classe Reponsavel |  Função Reponsavel |
 | :---         |     :---:      |   :---:      |          ---: |
-| Seta | OK  |  AutomateDraw  |
-| Nenhum  | OK  |AutomateDraw  |
-| Circulo  | OK  |AutomateDraw  |
-| Quadrado  | OK  |AutomateDraw  |
-| Linha  | OK  |AutomateDraw  |
-| Setar Cursor automaticamente  | OK  |AutomateDraw  |
+| Seta | OK  |  AutomateDraw  |SetArrowCursor()
+| Nenhum  | OK  |AutomateDraw  |SetNoneCursor()
+| Circulo  | OK  |CanvasDraw  |Cursor_Circle(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+| Quadrado  | OK  |CanvasDraw  |Cursor_Square(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+| Linha  | OK  |  CanvasDraw  | Cursor_Line(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+| Setar Cursor automaticamente  | OK  | AutomateDraw  | Cursors(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
 
-|   | Arquivos |
-| ------------- | ------------- |
-| Ler Duração Vídeo | OK  |
-| Iniciar Vídeo  | OK  |
-| Ler Imagens de Disco  | OK  |
-| Baixar pacote de Imagens via URL  | OK  |
-| Baixar Imagem via URL  | OK  |
-| Ler Arquivos Disco  | OK  |
+|   | Arquivos | Classe Reponsavel |  Função Reponsavel |
+| :---         |     :---:      |   :---:      |          ---: |
+| Ler Duração Vídeo | OK  |VideoControl|GetDurationVideoAsync(StorageFile)
+| Iniciar Vídeo  | OK  |VideoControl|StartVideo(StorageFile, MediaElement)
+| Ler Imagens de Disco  | OK  | GetDiskImagesAsync(StorageFolder)
+| Baixar pacote de Imagens via URL  | OK  |GetImagesWebAsync(String url_base, List<String> list_nomes, StorageFolder)
+| Baixar Imagem via URL  | OK  |DownloaImageDisk(string url_base, string path_file, StorageFolder)
+| Ler Arquivos Disco  | OK  |GetDiskFileAsync(StorageFolder)
   
 |   | Canvas |
 | ------------- | ------------- |

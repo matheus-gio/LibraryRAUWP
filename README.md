@@ -38,9 +38,13 @@
 Para os icones funcionarem é necessario uma configuração adicional no arquivo de layout, deve-se setar FontFamily="Segoe MDL2 Assets", segue o exemplo abaixo :
 
 MenuFlyoutItem x:Name="menu_fullScreen" Visibility="Visible" Text="Go to Window" Click="Menu_fullScreen_Click">
+
     <MenuFlyoutItem.Icon>
+    
         <FontIcon FontFamily="Segoe MDL2 Assets" x:Name="menu_fullScreen_icon"/>
+        
     </MenuFlyoutItem.Icon>
+    
 </MenuFlyoutItem>
                     
 |   | Icones | Classe Reponsavel |  Função Reponsavel |

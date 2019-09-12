@@ -1,5 +1,6 @@
 Esta biblioteca foi desenvolvida com intuito de facilitar o desenvolvimento de aplicações de Realidade Aumentada focada na utilização de projetores, a biblioteca é capaz de auxiliar o desenvolvedor a desenvolver ferramentas capazes de realizarem mapeamentos do mundo real.
 
+Na imagem abaixo é demonstrado um mapeamento gerado e em seguida o objeto sendo projetado no mundo fisico.
 ![Mapeamento gerado utilizando o software de exemplo.](https://github.com/matheus-gio/LibraryRAUWP/blob/master/Mapeamento%26Projecao.jpg)
 
 |  Tipos Cursor | Cursor Mouse | Classe Reponsavel |  Função Reponsavel |

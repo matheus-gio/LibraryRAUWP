@@ -19,7 +19,8 @@ Na imagem abaixo é demonstrado um mapeamento gerado e em seguida o objeto sendo
 | Ler Imagens de Disco  | OK  |ImageControl| GetDiskImagesAsync(StorageFolder)
 | Baixar pacote de Imagens via URL  | OK  |ImageControl|GetImagesWebAsync(String url_base, List<String> list_nomes, StorageFolder)
 | Baixar Imagem via URL  | OK  |ImageControl|DownloaImageDisk(string url_base, string path_file, StorageFolder)
-| Ler Arquivos Disco  | OK  |GetDiskFileAsync|GetDiskFileAsync(StorageFolder)
+| Ler Arquivos Disco  | OK  |FileControl|GetDiskFileAsync(StorageFolder)
+| File Picker para Imagem  | OK  |ImageControl|GetImageFilePicker()
   
 |   | Canvas | Classe Reponsavel |  Função Reponsavel |
 | :---         |     :---:      |   :---:      |          :--- |
@@ -39,6 +40,8 @@ Na imagem abaixo é demonstrado um mapeamento gerado e em seguida o objeto sendo
 | Criar Circulo Posição Especifica | OK  |CanvasDraw|CreateCirclePosition(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor, double x, double y)
 | Criar Quadrado  Posição Especifica| OK  |CanvasDraw|CreateSquarePosition(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor, double x, double y)
 | Criar Linha Posição Especifica | OK  |CanvasDraw|CreateLinePosition(Canvas canvas, double size, PointerRoutedEventArgs e, Color cor, double x1, double x2, double y1, double y2)
+| Adicionar Imagem de auxilio  | OK  |ImageControl| BackgroundImageDraw(Canvas canvas, Image img_draw, double opacity)
+| Remover Imagem de auxilio  | OK  |ImageControl| BackgroundImageDraw(Canvas canvas)
 
 Para os icones funcionarem é necessario uma configuração adicional no arquivo de layout, deve-se setar FontFamily="Segoe MDL2 Assets", segue o exemplo abaixo :
 

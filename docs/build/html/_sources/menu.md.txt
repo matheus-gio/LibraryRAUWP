@@ -7,25 +7,70 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
 
 Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, como pode ser visto a seguir.
 
-.. image:: _static/passo2.png
-    :scale: 20%
 
-# List
-
-This a sample list
-* Item 1
-* Item 2
+# Exemplos básicos
 
 
-# Codigo exemplo
+Criação quadrado
+------
+O exemplo abaixo foi criado para criar um quadrado de tamanho 200 na posicao (300,300) do canvas.
 
+	CanvasDraw canvasDraw = new CanvasDraw();
+    canvasDraw.CreateSquarePosition(canvas, 200, Color.FromArgb(255,255,255,255), 300, 300);
 
-	#include<stdio.h>
+Exportar uma imagem do canvas
+------
+O exemplo abaixo foi criado para criar um quadrado de tamanho 200 na posicao (300,300) do canvas.
 
-	int main(){
-		printf("Hello World");
-	}
-	return 0;
+	ImageControl imageControl = new ImageControl();
+	StorageFolder pasta = KnownFolders.PicturesLibrary;
+	String nome_arquivo = "nome_mapeamento.png";
+	imageControl.saveImageAsync(canvas, pasta, nome_arquivo);
+
+Exibição imagens do disco
+-----
+Abaixo segue um código de exemplo, onde as imagens do disco da pasta de fotos->teste são colocadas em uma lista para serem exibidas no canvas, estas imagens devem ser geradas anteriormente de forma a serem exibidos os mapeamentos dos objetos que serão apresentados a Realidade Aumentada
+
+		// Instancias da biblioteca
+        ImageControl imageControl = new ImageControl();
+
+        List<Image> list_imagens = null; // Lista de imagens para exibição
+
+        int time = 2000; // tempo troca de imagens
+        public MainPage()
+        {
+            this.InitializeComponent();
+
+            Thread t1 = new Thread(ImagensCanvas);
+            t1.Start();
+
+        }
+
+        private async void ImagensCanvas()
+        {
+            // Pega as imagens do disco
+            StorageFolder folder = KnownFolders.PicturesLibrary; // encontra a pasta imagens
+            folder = await folder.GetFolderAsync("teste"); // requisita a pasta teste dentro de imagens
+            list_imagens = await imageControl.GetDiskImagesAsync(folder);
+
+            int cont = 0;
+            while (true)
+            {
+                if (list_imagens != null)
+                {
+                    if (cont > list_imagens.Count) // verifica se tem mais imagens que o contador atual
+                    {
+                        cont = 0; // zera o contador
+                    }
+                    if (list_imagens.Count > 0) // garante que tenha uma imagem
+                    {
+                        await imageControl.AddImgtoCanvasAsync(canvas, list_imagens[cont]); // adicionar a imagem no canvas
+                    }
+                }
+                Thread.Sleep(time); // tempo definido para a thread aguardar
+            }
+        }
+
 
 # Referencia
 

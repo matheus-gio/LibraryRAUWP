@@ -83,8 +83,12 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getstarted</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#adicao-biblioteca">Adicao Biblioteca</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#list">List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#codigo-exemplo">Codigo exemplo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#exemplos-basicos">Exemplos básicos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#criacao-quadrado">Criação quadrado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exportar-uma-imagem-do-canvas">Exportar uma imagem do canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exibicao-imagens-do-disco">Exibição imagens do disco</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="#referencia">Referencia</a></li>
 </ul>
 
@@ -158,26 +162,71 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
 <div class="section" id="adicao-biblioteca">
 <h1>Adicao Biblioteca<a class="headerlink" href="#adicao-biblioteca" title="Link permanente para este título">¶</a></h1>
 <p>Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, como pode ser visto a seguir.</p>
-<p>.. image:: _static/passo2.png
-:scale: 20%</p>
 </div>
-<div class="section" id="list">
-<h1>List<a class="headerlink" href="#list" title="Link permanente para este título">¶</a></h1>
-<p>This a sample list</p>
-<ul class="simple">
-<li>Item 1</li>
-<li>Item 2</li>
-</ul>
-</div>
-<div class="section" id="codigo-exemplo">
-<h1>Codigo exemplo<a class="headerlink" href="#codigo-exemplo" title="Link permanente para este título">¶</a></h1>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include&lt;stdio.h&gt;</span>
-
-<span class="nb">int</span> <span class="n">main</span><span class="p">(){</span>
-	<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<div class="section" id="exemplos-basicos">
+<h1>Exemplos básicos<a class="headerlink" href="#exemplos-basicos" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="criacao-quadrado">
+<h2>Criação quadrado<a class="headerlink" href="#criacao-quadrado" title="Link permanente para este título">¶</a></h2>
+<p>O exemplo abaixo foi criado para criar um quadrado de tamanho 200 na posicao (300,300) do canvas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CanvasDraw</span> <span class="n">canvasDraw</span> <span class="o">=</span> <span class="n">new</span> <span class="n">CanvasDraw</span><span class="p">();</span>
+<span class="n">canvasDraw</span><span class="o">.</span><span class="n">CreateSquarePosition</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">Color</span><span class="o">.</span><span class="n">FromArgb</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="exportar-uma-imagem-do-canvas">
+<h2>Exportar uma imagem do canvas<a class="headerlink" href="#exportar-uma-imagem-do-canvas" title="Link permanente para este título">¶</a></h2>
+<p>O exemplo abaixo foi criado para criar um quadrado de tamanho 200 na posicao (300,300) do canvas.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ImageControl</span> <span class="n">imageControl</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ImageControl</span><span class="p">();</span>
+<span class="n">StorageFolder</span> <span class="n">pasta</span> <span class="o">=</span> <span class="n">KnownFolders</span><span class="o">.</span><span class="n">PicturesLibrary</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">nome_arquivo</span> <span class="o">=</span> <span class="s2">&quot;nome_mapeamento.png&quot;</span><span class="p">;</span>
+<span class="n">imageControl</span><span class="o">.</span><span class="n">saveImageAsync</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">pasta</span><span class="p">,</span> <span class="n">nome_arquivo</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exibicao-imagens-do-disco">
+<h2>Exibição imagens do disco<a class="headerlink" href="#exibicao-imagens-do-disco" title="Link permanente para este título">¶</a></h2>
+<p>Abaixo segue um código de exemplo, onde as imagens do disco da pasta de fotos-&gt;teste são colocadas em uma lista para serem exibidas no canvas, estas imagens devem ser geradas anteriormente de forma a serem exibidos os mapeamentos dos objetos que serão apresentados a Realidade Aumentada</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="o">//</span> <span class="n">Instancias</span> <span class="n">da</span> <span class="n">biblioteca</span>
+    <span class="n">ImageControl</span> <span class="n">imageControl</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ImageControl</span><span class="p">();</span>
+
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">Image</span><span class="o">&gt;</span> <span class="n">list_imagens</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span> <span class="o">//</span> <span class="n">Lista</span> <span class="n">de</span> <span class="n">imagens</span> <span class="n">para</span> <span class="n">exibição</span>
+
+    <span class="nb">int</span> <span class="n">time</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span> <span class="o">//</span> <span class="n">tempo</span> <span class="n">troca</span> <span class="n">de</span> <span class="n">imagens</span>
+    <span class="n">public</span> <span class="n">MainPage</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">InitializeComponent</span><span class="p">();</span>
+
+        <span class="n">Thread</span> <span class="n">t1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Thread</span><span class="p">(</span><span class="n">ImagensCanvas</span><span class="p">);</span>
+        <span class="n">t1</span><span class="o">.</span><span class="n">Start</span><span class="p">();</span>
+
+    <span class="p">}</span>
+
+    <span class="n">private</span> <span class="k">async</span> <span class="n">void</span> <span class="n">ImagensCanvas</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="o">//</span> <span class="n">Pega</span> <span class="k">as</span> <span class="n">imagens</span> <span class="n">do</span> <span class="n">disco</span>
+        <span class="n">StorageFolder</span> <span class="n">folder</span> <span class="o">=</span> <span class="n">KnownFolders</span><span class="o">.</span><span class="n">PicturesLibrary</span><span class="p">;</span> <span class="o">//</span> <span class="n">encontra</span> <span class="n">a</span> <span class="n">pasta</span> <span class="n">imagens</span>
+        <span class="n">folder</span> <span class="o">=</span> <span class="k">await</span> <span class="n">folder</span><span class="o">.</span><span class="n">GetFolderAsync</span><span class="p">(</span><span class="s2">&quot;teste&quot;</span><span class="p">);</span> <span class="o">//</span> <span class="n">requisita</span> <span class="n">a</span> <span class="n">pasta</span> <span class="n">teste</span> <span class="n">dentro</span> <span class="n">de</span> <span class="n">imagens</span>
+        <span class="n">list_imagens</span> <span class="o">=</span> <span class="k">await</span> <span class="n">imageControl</span><span class="o">.</span><span class="n">GetDiskImagesAsync</span><span class="p">(</span><span class="n">folder</span><span class="p">);</span>
+
+        <span class="nb">int</span> <span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">true</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">list_imagens</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">cont</span> <span class="o">&gt;</span> <span class="n">list_imagens</span><span class="o">.</span><span class="n">Count</span><span class="p">)</span> <span class="o">//</span> <span class="n">verifica</span> <span class="n">se</span> <span class="n">tem</span> <span class="n">mais</span> <span class="n">imagens</span> <span class="n">que</span> <span class="n">o</span> <span class="n">contador</span> <span class="n">atual</span>
+                <span class="p">{</span>
+                    <span class="n">cont</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="o">//</span> <span class="n">zera</span> <span class="n">o</span> <span class="n">contador</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">list_imagens</span><span class="o">.</span><span class="n">Count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">//</span> <span class="n">garante</span> <span class="n">que</span> <span class="n">tenha</span> <span class="n">uma</span> <span class="n">imagem</span>
+                <span class="p">{</span>
+                    <span class="k">await</span> <span class="n">imageControl</span><span class="o">.</span><span class="n">AddImgtoCanvasAsync</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">list_imagens</span><span class="p">[</span><span class="n">cont</span><span class="p">]);</span> <span class="o">//</span> <span class="n">adicionar</span> <span class="n">a</span> <span class="n">imagem</span> <span class="n">no</span> <span class="n">canvas</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">Thread</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="n">time</span><span class="p">);</span> <span class="o">//</span> <span class="n">tempo</span> <span class="n">definido</span> <span class="n">para</span> <span class="n">a</span> <span class="n">thread</span> <span class="n">aguardar</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="referencia">

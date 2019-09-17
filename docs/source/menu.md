@@ -7,7 +7,7 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
 
 Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, como pode ser visto a seguir.
 
-.. image:: _images/passo1.png
+.. image:: img/comment-close.png
     :scale: 20%
 
 # List

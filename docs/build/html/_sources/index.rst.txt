@@ -3,13 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SimplAR's documentation!
+Seja bem vindo a documentação do SimplAR!
 ===================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+Biblioteca desenvolvida para realidade aumentada
 
 
 Indices and tables

@@ -1,10 +1,10 @@
-.. SimpleAR documentation master file, created by
-   sphinx-quickstart on Tue Sep 17 15:32:04 2019.
+.. SimplAR documentation master file, created by
+   sphinx-quickstart on Tue Sep 17 15:41:35 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SimpleAR's documentation!
-====================================
+Welcome to SimplAR's documentation!
+===================================
 
 .. toctree::
    :maxdepth: 2

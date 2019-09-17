@@ -130,6 +130,8 @@ Segue o código para inicilizar vídeo presente em disco.
 
             // passa o arquivo de video e o elemento do xaml.
             videoControl.StartVideo(videofile, UImediaElement);
+
+
 # Referência
 
 Segue abaixo a referência da biblioteca.

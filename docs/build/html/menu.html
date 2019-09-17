@@ -87,6 +87,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#criacao-quadrado">Criação quadrado</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exportar-uma-imagem-do-canvas">Exportar uma imagem do canvas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exibicao-imagens-do-disco">Exibição imagens do disco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tela-cheia-e-window">Tela cheia e Window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-imagens-web-para-disco">Download imagens WEB para disco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inicializar-video">Inicializar Vídeo</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#referencia">Referência</a></li>
@@ -232,6 +235,64 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
             <span class="n">Thread</span><span class="o">.</span><span class="n">Sleep</span><span class="p">(</span><span class="n">time</span><span class="p">);</span> <span class="o">//</span> <span class="n">tempo</span> <span class="n">definido</span> <span class="n">para</span> <span class="n">a</span> <span class="n">thread</span> <span class="n">aguardar</span>
         <span class="p">}</span>
     <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tela-cheia-e-window">
+<h2>Tela cheia e Window<a class="headerlink" href="#tela-cheia-e-window" title="Link permanente para este título">¶</a></h2>
+<p>Abaixo segue um código de exemplo para deixar o canvas em tela cheia e em Window.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>		<span class="n">var</span> <span class="n">view</span> <span class="o">=</span> <span class="n">ApplicationView</span><span class="o">.</span><span class="n">GetForCurrentView</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">IsFullScreenMode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">ExitFullScreenMode</span><span class="p">();</span>
+            <span class="o">//</span> <span class="n">Troca</span> <span class="n">o</span> <span class="n">icone</span> <span class="n">para</span> <span class="n">modo</span> <span class="n">tela</span> <span class="n">Window</span>
+            <span class="n">iconsControl</span><span class="o">.</span><span class="n">SetGoWindowScreen</span><span class="p">(</span><span class="n">menu_fullScreen_icon</span><span class="p">);</span>
+            <span class="n">menu_fullScreen</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;Go to FullScreen&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">view</span><span class="o">.</span><span class="n">TryEnterFullScreenMode</span><span class="p">();</span>
+            <span class="o">//</span> <span class="n">Troca</span> <span class="n">icone</span> <span class="n">por</span> <span class="n">tela</span> <span class="n">cheia</span>
+            <span class="n">iconsControl</span><span class="o">.</span><span class="n">SetGoFullScreen</span><span class="p">(</span><span class="n">menu_fullScreen_icon</span><span class="p">);</span>
+            <span class="n">menu_fullScreen</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;Go to Window&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-imagens-web-para-disco">
+<h2>Download imagens WEB para disco<a class="headerlink" href="#download-imagens-web-para-disco" title="Link permanente para este título">¶</a></h2>
+<p>Segue o código que realiza o download de imagens para o disco.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>		<span class="o">//</span> <span class="n">url</span> <span class="n">que</span> <span class="n">será</span> <span class="n">usado</span> <span class="n">para</span> <span class="n">formar</span> <span class="n">a</span> <span class="n">url</span> <span class="n">final</span> <span class="n">juntamente</span> <span class="n">com</span> <span class="n">nome</span> <span class="n">das</span> <span class="n">imagens</span>
+        <span class="n">String</span> <span class="n">url_base</span> <span class="o">=</span> <span class="s2">&quot;http://exemple.com/images/&quot;</span><span class="p">;</span>
+
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">nome_imagens</span> <span class="o">=</span> <span class="n">new</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+        <span class="o">//</span> <span class="n">abaixo</span> <span class="n">nome</span> <span class="n">das</span> <span class="n">imagens</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem1.jpg&quot;</span><span class="p">);</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem1.png&quot;</span><span class="p">);</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem2.jpg&quot;</span><span class="p">);</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem3.png&quot;</span><span class="p">);</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem4.jpg&quot;</span><span class="p">);</span>
+        <span class="n">nome_imagens</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&quot;imagem5.jpg&quot;</span><span class="p">);</span>
+
+        <span class="n">StorageFolder</span> <span class="n">pasta_destino</span> <span class="o">=</span> <span class="n">KnownFolders</span><span class="o">.</span><span class="n">PicturesLibrary</span><span class="p">;</span>
+        <span class="n">pasta_destino</span> <span class="o">=</span> <span class="k">await</span> <span class="n">pasta_destino</span><span class="o">.</span><span class="n">GetFolderAsync</span><span class="p">(</span><span class="s2">&quot;imagens_web&quot;</span><span class="p">);</span>
+
+        <span class="n">imageControl</span><span class="o">.</span><span class="n">GetImagesWebAsync</span><span class="p">(</span><span class="n">url_base</span><span class="p">,</span> <span class="n">nome_imagens</span><span class="p">,</span> <span class="n">pasta_destino</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">realiza</span> <span class="n">internamente</span> <span class="n">o</span> <span class="n">download</span> <span class="n">das</span> <span class="n">imagens</span> <span class="n">de</span> <span class="n">forma</span> <span class="n">asyncrona</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inicializar-video">
+<h2>Inicializar Vídeo<a class="headerlink" href="#inicializar-video" title="Link permanente para este título">¶</a></h2>
+<p>Segue o código para inicilizar vídeo presente em disco.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">StorageFolder</span> <span class="n">videos_folder</span> <span class="o">=</span> <span class="k">await</span> <span class="n">KnownFolders</span><span class="o">.</span><span class="n">VideosLibrary</span><span class="o">.</span><span class="n">GetFolderAsync</span><span class="p">(</span><span class="s2">&quot;videos_ra&quot;</span><span class="p">);</span>
+        <span class="o">//</span> <span class="n">pega</span> <span class="n">o</span> <span class="n">arquivo</span> <span class="n">do</span> <span class="n">disco</span>
+        <span class="n">StorageFile</span> <span class="n">videofile</span> <span class="o">=</span> <span class="k">await</span> <span class="n">videos_folder</span><span class="o">.</span><span class="n">GetFileAsync</span><span class="p">(</span><span class="s2">&quot;video.mp4&quot;</span><span class="p">);</span>
+
+        <span class="n">VideoControl</span> <span class="n">videoControl</span> <span class="o">=</span> <span class="n">new</span> <span class="n">VideoControl</span><span class="p">();</span>
+
+        <span class="o">//</span> <span class="n">passa</span> <span class="n">o</span> <span class="n">arquivo</span> <span class="n">de</span> <span class="n">video</span> <span class="n">e</span> <span class="n">o</span> <span class="n">elemento</span> <span class="n">do</span> <span class="n">xaml</span><span class="o">.</span>
+        <span class="n">videoControl</span><span class="o">.</span><span class="n">StartVideo</span><span class="p">(</span><span class="n">videofile</span><span class="p">,</span> <span class="n">UImediaElement</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>

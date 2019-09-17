@@ -75,7 +75,61 @@ Abaixo segue um código de exemplo, onde as imagens do disco da pasta de fotos->
             }
         }
 
+Tela cheia e Window
+-----
+Abaixo segue um código de exemplo para deixar o canvas em tela cheia e em Window.
 
+			var view = ApplicationView.GetForCurrentView();
+            if (view.IsFullScreenMode)
+            {
+                view.ExitFullScreenMode();
+                // Troca o icone para modo tela Window
+                iconsControl.SetGoWindowScreen(menu_fullScreen_icon);
+                menu_fullScreen.Text = "Go to FullScreen";
+            }
+            else
+            {
+                view.TryEnterFullScreenMode();
+                // Troca icone por tela cheia
+                iconsControl.SetGoFullScreen(menu_fullScreen_icon);
+                menu_fullScreen.Text = "Go to Window";
+            }
+
+
+Download imagens WEB para disco
+-----
+Segue o código que realiza o download de imagens para o disco.
+
+			// url que será usado para formar a url final juntamente com nome das imagens
+            String url_base = "http://exemple.com/images/";
+
+            List<String> nome_imagens = new List<String>();
+            // abaixo nome das imagens
+            nome_imagens.Add("imagem1.jpg");
+            nome_imagens.Add("imagem1.png");
+            nome_imagens.Add("imagem2.jpg");
+            nome_imagens.Add("imagem3.png");
+            nome_imagens.Add("imagem4.jpg");
+            nome_imagens.Add("imagem5.jpg");
+
+            StorageFolder pasta_destino = KnownFolders.PicturesLibrary;
+            pasta_destino = await pasta_destino.GetFolderAsync("imagens_web");
+
+            imageControl.GetImagesWebAsync(url_base, nome_imagens, pasta_destino);
+            // realiza internamente o download das imagens de forma asyncrona
+
+Inicializar Vídeo
+-----
+Segue o código para inicilizar vídeo presente em disco.
+
+		StorageFolder videos_folder = await KnownFolders.VideosLibrary.GetFolderAsync("videos_ra");
+            // pega o arquivo do disco
+            StorageFile videofile = await videos_folder.GetFileAsync("video.mp4");
+
+            VideoControl videoControl = new VideoControl();
+
+            // passa o arquivo de video e o elemento do xaml.
+            videoControl.StartVideo(videofile, UImediaElement);
 # Referência
 
 Segue abaixo a referência da biblioteca.

@@ -15,7 +15,7 @@ author = 'sphinx-themes.org'
 version = ''
 # The full version, including alpha/beta/rc tags
 release = '1'
-
+import sphinx_rtd_theme
 
 # -- General configuration ---------------------------------------------------
 

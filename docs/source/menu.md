@@ -5,8 +5,12 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
 
 # Adicao Biblioteca
 
-Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, como pode ser visto a seguir.
-
+Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, para realizar este procedimento siga os seguintes passos :
+1. Clique com o botão direito em referências
+2. Adicionar Referência
+3. Procurar
+4. Encontre o arquivo no disco e precione adicionar
+5. Pronto a biblioteca foi adicionada, agora é so codar.
 
 # Exemplos básicos
 
@@ -75,3 +79,5 @@ Abaixo segue um código de exemplo, onde as imagens do disco da pasta de fotos->
 # Referência
 
 Segue abaixo a referência da biblioteca.
+
+Tabela de referencia

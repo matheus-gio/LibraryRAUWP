@@ -30,6 +30,7 @@ author = 'Matheus Lucena'
 
 extensions = [
 	"sphinx_rtd_theme",
+	"recommonmark",
 ]
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
@@ -55,3 +56,9 @@ exclude_patterns = []
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 master_doc = 'index'
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}

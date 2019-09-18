@@ -92,7 +92,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#inicializar-video">Inicializar Vídeo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#referencia">Referência</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#referencia">Referência</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cursor-mouse">Cursor Mouse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arquivos">Arquivos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#canvas">Canvas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#icones">Icones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#componentes">Componentes</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -300,7 +307,207 @@ A instalação e a criação de projeto que vamos utiliizar para uma breve expli
 <div class="section" id="referencia">
 <h1>Referência<a class="headerlink" href="#referencia" title="Link permanente para este título">¶</a></h1>
 <p>Segue abaixo a referência da biblioteca.</p>
-<p>Tabela de referencia</p>
+<div class="section" id="cursor-mouse">
+<h2>Cursor Mouse<a class="headerlink" href="#cursor-mouse" title="Link permanente para este título">¶</a></h2>
+<ul>
+<li><p class="first">Classe AutomateDraw</p>
+<ul class="simple">
+<li>Cursor de Seta - SetArrowCursor()</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Sem cursor - SetNoneCursor()</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Setar Cursor Automaticamente - Cursors(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)</li>
+</ul>
+</li>
+<hr class="docutils" />
+<li><p class="first">Classe CanvasDraw</p>
+<ul class="simple">
+<li>Cursor de Circulo - Cursor_Circle(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Cursor Quadrado- Cursor_Square(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Cursor de Linha - Cursor_Line(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="arquivos">
+<h2>Arquivos<a class="headerlink" href="#arquivos" title="Link permanente para este título">¶</a></h2>
+<ul>
+<li><p class="first">Classe VideoControl</p>
+<ul class="simple">
+<li>Ler Duração Vídeo - GetDurationVideoAsync(StorageFile)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Iniciar Vídeo - StartVideo(StorageFile, MediaElement</li>
+</ul>
+</li>
+<hr class="docutils" />
+<li><p class="first">Classe ImageControl</p>
+<ul class="simple">
+<li>Ler Imagens de Disco - GetDiskImagesAsync(StorageFolder)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Baixar pacote de Imagens via URL - GetImagesWebAsync(String url_base, List list_nomes, StorageFolder)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Baixar Imagem via URL - DownloaImageDisk(string url_base, string path_file, StorageFolder)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Ler Arquivos Disco - GetDiskFileAsync(StorageFolder)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>File Picker para Imagem - GetImageFilePicker()</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="canvas">
+<h2>Canvas<a class="headerlink" href="#canvas" title="Link permanente para este título">¶</a></h2>
+<ul>
+<li><p class="first">Classe ImageControl</p>
+<ul class="simple">
+<li>Salvar em disco - saveImageAsync(Canvas, StorageFolder, string nome)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Adicionar imagem do disco - AddImgtoCanvasAsync(Canvas, Image)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Remover Imagem de auxilio - BackgroundImageDraw(Canvas canvas)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Adicionar Imagem de auxilio - BackgroundImageDraw(Canvas canvas, Image img_draw, double opacity)</li>
+</ul>
+</li>
+<hr class="docutils" />
+<li><p class="first">Classe AutomateDraw</p>
+<ul class="simple">
+<li>Verificar seleção de Menu - Text, Line, Square, Circle, Rectangle</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar componente baseado em click e no menu - CreateElementPointerPressed(Canvas,double size, Color, UIElement, PointerRoutedEventArgs)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Limpar Canvas - ClearCanvas(Canvas canvas)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Desfazer última ação - Undo_Draw(Canvas canvas)</li>
+</ul>
+</li>
+<hr class="docutils" />
+<li><p class="first">Classe CanvasDraw</p>
+<ul class="simple">
+<li>Esquerdo Pressionado - LeftPressed(PointerRoutedEventArgs e, UIElement ui)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Direito Pressionado - RigthPressed(PointerRoutedEventArgs e, UIElement ui)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Circulo - CreateCircle(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Quadrado - CreateSquare(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Linha - CreateLine(Canvas canvas, double size, PointerRoutedEventArgs e, Color cor)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Retangulo - Create_Rectangle(Canvas canvas, PointerRoutedEventArgs e, Color cor)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Texto - CreateText(string val, Canvas canvas, double size, PointerRoutedEventArgs e, Color cor, double x, double y)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Componentes UI Visiveis - HideComponent(UIElement[] component)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Componentes UI Invisiveis - VisibleComponent(UIElement[] component)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Circulo Posição Especifica - CreateCirclePosition(Canvas canvas, double size, Color cor, double x, double y)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Quadrado Posição Especifica - CreateSquarePosition(Canvas canvas, double size, Color cor, double x, double y)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Criar Linha Posição Especifica - CreateLinePosition(Canvas canvas, double size, Color cor, double x1, double x2, double y1, double y2)</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="icones">
+<h2>Icones<a class="headerlink" href="#icones" title="Link permanente para este título">¶</a></h2>
+<p>Observação : Para os icones funcionarem corretamente é necessário estar setado da seguinte forma dentro do xaml:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">MenuFlyoutItem</span><span class="o">.</span><span class="n">Icon</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">FontIcon</span> <span class="n">FontFamily</span><span class="o">=</span><span class="s2">&quot;Segoe MDL2 Assets&quot;</span> <span class="n">x</span><span class="p">:</span><span class="n">Name</span><span class="o">=</span><span class="s2">&quot;menu_fullScreen_icon&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">MenuFlyoutItem</span><span class="o">.</span><span class="n">Icon</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">Classe IconsControl</p>
+<ul class="simple">
+<li>Checado - SetChecked(FontIcon element)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Sem icone - SetNotIcon(FontIcon element)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Tela cheia - SetGoFullScreen(FontIcon element)</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Sair Tela Cheia - SetGoWindowScreen(FontIcon element)</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="componentes">
+<h2>Componentes<a class="headerlink" href="#componentes" title="Link permanente para este título">¶</a></h2>
+<ul>
+<li><p class="first">Classe MessageControl</p>
+<ul class="simple">
+<li>Dialogo de Texto - InputTextDialogAsync(CanvasDraw canvasdraw, string title)</li>
+</ul>
+<hr class="docutils" />
+</li>
+</ul>
+</div>
 </div>
 
 

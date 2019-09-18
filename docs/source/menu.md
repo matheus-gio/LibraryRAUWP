@@ -136,4 +136,123 @@ Segue o código para inicilizar vídeo presente em disco.
 
 Segue abaixo a referência da biblioteca.
 
-Tabela de referencia
+Cursor Mouse
+-----
+
+* Classe AutomateDraw
+
+    * Cursor de Seta - SetArrowCursor()
+    ********
+    * Sem cursor - SetNoneCursor()
+    ********
+    * Setar Cursor Automaticamente - Cursors(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color) 
+    ********
+
+* Classe CanvasDraw
+    * Cursor de Circulo - Cursor_Circle(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+    ********
+    * Cursor Quadrado- Cursor_Square(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+    ********
+    * Cursor de Linha - Cursor_Line(Canvas, double, PointerRoutedEventArgs, Windows.UI.Color)
+    ********
+
+
+Arquivos
+-----
+
+* Classe VideoControl
+    * Ler Duração Vídeo - GetDurationVideoAsync(StorageFile)
+    ********
+    * Iniciar Vídeo - StartVideo(StorageFile, MediaElement
+    ********
+
+
+* Classe ImageControl
+    * Ler Imagens de Disco - GetDiskImagesAsync(StorageFolder)
+    ********
+    * Baixar pacote de Imagens via URL - GetImagesWebAsync(String url_base, List list_nomes, StorageFolder)
+    ********
+    * Baixar Imagem via URL - DownloaImageDisk(string url_base, string path_file, StorageFolder)
+    ********
+    * Ler Arquivos Disco - GetDiskFileAsync(StorageFolder)
+    ********
+    * File Picker para Imagem - GetImageFilePicker()
+    ********
+
+
+Canvas
+-----
+
+* Classe ImageControl
+    * Salvar em disco - saveImageAsync(Canvas, StorageFolder, string nome)
+    ********
+    * Adicionar imagem do disco - AddImgtoCanvasAsync(Canvas, Image)
+    ********
+    * Remover Imagem de auxilio - BackgroundImageDraw(Canvas canvas)
+    ********
+    * Adicionar Imagem de auxilio - BackgroundImageDraw(Canvas canvas, Image img_draw, double opacity)
+    ********
+
+
+* Classe AutomateDraw
+    * Verificar seleção de Menu - Text, Line, Square, Circle, Rectangle
+    ********
+    * Criar componente baseado em click e no menu - CreateElementPointerPressed(Canvas,double size, Color, UIElement, PointerRoutedEventArgs)
+    ********
+    * Limpar Canvas - ClearCanvas(Canvas canvas)
+    ********
+    * Desfazer última ação - Undo_Draw(Canvas canvas)
+    ********
+
+* Classe CanvasDraw
+    * Esquerdo Pressionado - LeftPressed(PointerRoutedEventArgs e, UIElement ui)
+    ********
+    * Direito Pressionado - RigthPressed(PointerRoutedEventArgs e, UIElement ui)
+    ********
+    * Criar Circulo - CreateCircle(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor) 
+    ********
+    * Criar Quadrado - CreateSquare(Canvas canvas, PointerRoutedEventArgs e, double size, Color cor)
+    ********
+    * Criar Linha - CreateLine(Canvas canvas, double size, PointerRoutedEventArgs e, Color cor)
+    ********
+    * Criar Retangulo - Create_Rectangle(Canvas canvas, PointerRoutedEventArgs e, Color cor)
+    ********
+    * Criar Texto - CreateText(string val, Canvas canvas, double size, PointerRoutedEventArgs e, Color cor, double x, double y)
+    ********
+    * Componentes UI Visiveis - HideComponent(UIElement[] component)
+    ********
+    * Componentes UI Invisiveis - VisibleComponent(UIElement[] component)
+    ********
+    * Criar Circulo Posição Especifica - CreateCirclePosition(Canvas canvas, double size, Color cor, double x, double y)
+    ********
+    * Criar Quadrado Posição Especifica - CreateSquarePosition(Canvas canvas, double size, Color cor, double x, double y)
+    ********
+    * Criar Linha Posição Especifica - CreateLinePosition(Canvas canvas, double size, Color cor, double x1, double x2, double y1, double y2)
+    ********
+
+
+Icones
+-----
+Observação : Para os icones funcionarem corretamente é necessário estar setado da seguinte forma dentro do xaml: 
+
+    <MenuFlyoutItem.Icon>
+          <FontIcon FontFamily="Segoe MDL2 Assets" x:Name="menu_fullScreen_icon"/>
+    </MenuFlyoutItem.Icon>
+
+* Classe IconsControl
+    * Checado - SetChecked(FontIcon element) 
+    ********
+    * Sem icone - SetNotIcon(FontIcon element)
+    ********
+    * Tela cheia - SetGoFullScreen(FontIcon element)
+    ********
+    * Sair Tela Cheia - SetGoWindowScreen(FontIcon element)
+    ********
+
+
+Componentes
+--------
+
+* Classe MessageControl
+    * Dialogo de Texto - InputTextDialogAsync(CanvasDraw canvasdraw, string title)
+    ********

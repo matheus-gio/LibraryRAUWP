@@ -12,9 +12,7 @@ Descricao.
 
    menu
 
-Indices and tables
+Pesquisa
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

@@ -3,7 +3,7 @@
 Para utilizar a biblioteca se faz necessário a instalação do Desenvolvimento com a plataforma universal do windows.
 A instalação e a criação de projeto que vamos utiliizar para uma breve explicação pode-ser encontrada em : Configuração e inicialização de um projeto em branco <https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up>.
 
-# Adicao Biblioteca
+# Adição Biblioteca
 
 Após a instalação e inicialização do projeto é necessário adicionar a DLL da biblioteca, para realizar este procedimento siga os seguintes passos :
 1. Clique com o botão direito em referências
